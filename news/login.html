@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="login.css">
+    <title>Daily Digest</title>
+    <style>
+        /* Additional CSS for the search bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+        }
+
+        .search-bar button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #45a049;
+        }
+        .flex-con{
+            display: flex;
+            padding: 30px;
+        }
+        .log{
+            display: flex;
+            right: 0;
+            margin-top: 120px;
+            width: 500px;
+            box-shadow: 10px 10px #45a049;
+            
+        }
+        
+     
+        .box {
+            width: 300px;
+            margin-top: 200px;
+            margin-left: 300px;
+            margin-right: 100px; 
+            color: white;
+            background-color: black; 
+            padding: 20px;
+            border-width: 4px;
+            border-color: #ccc; 
+            border-radius: 10px; 
+        }
+
+        .loginh {
+            color: white;
+            font-size: 20px; 
+            margin-bottom: 10px; 
+        }
+        
+
+        .entry label {
+            color: white; 
+        }
+
+        .entry input[type="email"],
+        .entry input[type="password"] {
+            width: 100%; 
+            padding: 8px; 
+            margin-bottom: 10px; 
+            border-radius: 5px; 
+            border: none; 
+        }
+        .button{
+            background-color: #4CAF50;
+            width: 70px;
+            height: 40px;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Daily Digest" width="75" height="75">
+        </div>
+        <h1 class="header-title">DAILY DIGEST</h1> 
+        <nav>
+            <ul>
+                <li><a href="news.html">Home</a></li>
+                <li><a href="#sportsNews">Sports</a></li>
+                <li><a href="#businessNews">Business</a></li>
+                <li><a href="#techNews">Technology</a></li>
+            
+                <li><a href="login.html" class="nav-link login" style="color: black;">Login</a></li>
+            </ul>
+            <div class="bar">
+                <i class="open fa-solid fa-bars-staggered"></i>
+                <i class="close fa-solid fa-xmark"></i>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- Search bar goes here, beside the header -->
+    
+
+    <!--Login Box-->
+
+    <div class="flex-con">
+        <div class="box">
+            <div class="loginh">Hey there! Welcome Back</div>
+            <div class="entry">
+                <label for="Email" >Email</label>
+                <input type="email" name="Email" id="Email">
+                <label for="Password">Password</label>
+                <input type="password" id="Password" name="Password"><br>
+                <button type="submit" id="button" class="button" onclick="validateForm()">Login</button>
+                <div>Don't have an account? <a href="signup.html" style="text-decoration: underline;">SignUp</a></div>
+            </div>
+        </div>
+        <div class="log">
+            <img src="Screenshot 2024-03-16 023112.png" alt="">
+        </div>
+    </div>
+    <script>
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        function validateForm() {
+            const email = document.getElementById('Email').value;
+            const password = document.getElementById('Password').value;
+
+            if (!validateEmail(email) && email==='') {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            if (password === '') {
+                alert('Please enter your password.');
+                return false;
+            }
+
+            alert('Logged in successfully');
+            return true;
+        }
+    </script>
+</body>
+</html>

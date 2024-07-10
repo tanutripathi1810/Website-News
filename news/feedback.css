@@ -1,0 +1,108 @@
+body{
+
+  font-family: lato;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+label{
+  display: inline-block;
+}
+
+form{
+
+  background-color:  #c48a44;
+  padding: 20px 20px 20px 20px;
+
+
+}
+
+
+#title{
+
+  font-size: 50px;
+  text-align: center;
+}
+
+#description{
+
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.inputbox{
+
+  width: 100%;
+  height: 25px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  text-align: left;
+  font-size: 17px;
+  font-style: italic;
+  color: grey;
+  border-radius: 4px;
+  border-color: white;
+
+
+}
+
+.emalabel{
+
+  font-size: 18px;
+  display: block;
+  text-align: left;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+
+
+}
+
+.inputarticle{
+   display: inline-block;
+}
+
+.submit{
+
+  text-align: center;
+  width: 50%;
+  height: 50px;
+  background-color: #4BF15A;
+  display: block;
+  margin: auto;
+
+}
+
+.comsection{
+
+  width: 100%;
+}
+body{
+  background-color: black;
+}
+header #title,
+header #description {
+    color: white;
+}
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 50px;
+  background-color: #dd8e2d;
+  transition: 0.3s;
+}
+
+.header.sticky {
+  padding-block: 10px;
+  box-shadow: inset 0 -1.5px 3px rgba(255, 255, 255, 0.3);
+}
+
+
+

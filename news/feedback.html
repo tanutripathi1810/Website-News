@@ -1,0 +1,121 @@
+<link rel="stylesheet" type="text/css" href="feedback.css">
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+
+</script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="feedback.css">
+  <title>Daily Digest</title>
+
+
+  <body>
+    <header>
+      <h1 id="title">Feedback</h1>
+      <p id="description">We would love to learn more about your experience of our website</p>
+    </header>
+
+    <form id="survey-form">
+        <label class="emalabel" id="name-label"> Name:</label>
+        <input class="inputbox" type="text" name="name" id="name" placeholder="Enter your name....." required style="padding: 3px; height: 30px;"><br>
+
+        <label class="emalabel">How would you rate the overall design and layout of the website?</label>
+        <input type="radio" id="design-rating1" name="design-rating" value="Good">
+        <label for="design-rating1">Good</label><br>
+
+        <input type="radio" id="design-rating2" name="design-rating" value="Bad">
+        <label for="design-rating2">Bad</label><br>
+
+        <input type="radio" id="design-rating3" name="design-rating" value="Excellent">
+        <label for="design-rating3">Excellent</label><br>
+
+        <label class="emalabel">Is the navigation user-friendly and intuitive?</label>
+        <input type="radio" id="navigation-rating1" name="navigation-rating" value="Yes">
+        <label for="navigation-rating1">Yes</label><br>
+
+        <input type="radio" id="navigation-rating2" name="navigation-rating" value="No">
+        <label for="navigation-rating2">No</label><br>
+
+        <label class="emalabel">Are you satisfied with the speed and performance of the website?</label>
+        <input type="radio" id="speed-rating1" name="speed-rating" value="Yes">
+        <label for="speed-rating1">Yes</label><br>
+
+        <input type="radio" id="speed-rating2" name="speed-rating" value="No">
+        <label for="speed-rating2">No</label><br>
+
+        <label class="emalabel">How would you rate the quality and relevance of the news articles?</label>
+        <input type="radio" id="article-rating1" name="article-rating" value="Good">
+        <label for="article-rating1">Good</label><br>
+
+        <input type="radio" id="article-rating2" name="article-rating" value="Bad">
+        <label for="article-rating2">Bad</label><br>
+
+        <input type="radio" id="article-rating3" name="article-rating" value="Excellent">
+        <label for="article-rating3">Excellent</label><br>
+
+        <label class="emalabel">Do you find the categorization of news topics helpful?</label>
+        <input type="radio" id="categorization-rating1" name="categorization-rating" value="Yes">
+        <label for="categorization-rating1">Yes</label><br>
+
+        <input type="radio" id="categorization-rating2" name="categorization-rating" value="No">
+        <label for="categorization-rating2">No</label><br>
+
+        <label class="emalabel">Are there any features or functionalities you would like to see added to the website?</label>
+        <textarea class="features-comments" name="features-comments" rows="4" cols="110"></textarea><br>
+
+        <label class="emalabel">Is the website accessible across different devices and screen sizes?</label>
+        <input type="radio" id="accessibility-rating1" name="accessibility-rating" value="Yes">
+        <label for="accessibility-rating1">Yes</label><br>
+
+        <input type="radio" id="accessibility-rating2" name="accessibility-rating" value="No">
+        <label for="accessibility-rating2">No</label><br>
+
+        <label class="emalabel">How would you rate the credibility and reliability of the news sources featured on the website?</label>
+        <input type="radio" id="reliability-rating1" name="reliability-rating" value="Good">
+        <label for="reliability-rating1">Good</label><br>
+
+        <input type="radio" id="reliability-rating2" name="reliability-rating" value="Bad">
+        <label for="reliability-rating2">Bad</label><br>
+
+        <input type="radio" id="reliability-rating3" name="reliability-rating" value="Excellent">
+        <label for="reliability-rating3">Excellent</label><br>
+
+        <label class="emalabel">Are there any improvements you would suggest regarding the commenting or community engagement features?</label>
+        <textarea class="improvements-comments" name="improvements-comments" rows="4" cols="110"></textarea><br>
+
+        <label class="emalabel">Overall, how likely are you to recommend this website to others?</label>
+        <input type="radio" id="recommend-rating1" name="recommend-rating" value="Very Likely">
+        <label for="recommend-rating1">Very Likely</label><br>
+
+        <input type="radio" id="recommend-rating2" name="recommend-rating" value="Likely">
+        <label for="recommend-rating2">Likely</label><br>
+
+        <input type="radio" id="recommend-rating3" name="recommend-rating" value="Unlikely">
+        <label for="recommend-rating3">Unlikely</label><br>
+
+        <input type="radio" id="recommend-rating4" name="recommend-rating" value="Very Unlikely">
+        <label for="recommend-rating4">Very Unlikely</label><br>
+
+        <input type="radio" id="recommend-rating5" name="recommend-rating" value="Not Sure">
+        <label for="recommend-rating5">Not Sure</label><br>
+
+        <label class="emalabel" for="comments">Feel free to provide any additional comments:</label><br>
+        <textarea class="additional-comments" name="additional-comments" rows="8" cols="110" style="margin-bottom: 10px;"></textarea><br>
+
+        <input class="submit" id="submit" type="submit" value="Submit" onclick="showAlert()">
+    </form>
+    <div class="copyrights">
+        Copyrights &copy; Tanu Tripathi
+    </div>
+
+    <script>
+      function showAlert(){
+        alert("Feedback Saved Succesfully");
+      }
+    </script>
+</body>
+
+

@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    height: 500px;
+    min-height: 100vh;
+    color: #d0d0d1;
+    overflow-y: overlay;
+}
+.header {
+    position: fixed;
+    display: flex;
+    top: 0%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 50px;
+    background-color: #dd8e2d;
+    transition: 0.3s;
+}
+
+.header.sticky {
+    padding-block: 10px;
+    box-shadow: inset 0 -1.5px 3px rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+    font-size: 45px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav div.bar {
+    display: none;
+    position: absolute;
+    right: 80px;
+    margin-top: -10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+nav div.bar.active .open {
+    display: none;
+}
+
+nav div.bar .close {
+    display: none;
+}
+
+nav div.bar.active .close {
+    display: initial;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+    padding: 0 10px;
+    border-left: 1px solid #fff0;
+    border-right: 1px solid #fff0;
+    transition: 0.3s;
+}
+
+nav ul li:hover {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+    nav div.bar {
+        display: block;
+    }
+
+    nav ul {
+        opacity: 0;
+        position: absolute;
+        background-color: #0b0b11;
+        flex-direction: column;
+        right: 0px;
+        padding: 30px 30px 10px;
+        text-align: center;
+        pointer-events: none;
+        border-radius: 10px;
+    }
+
+    nav ul.activeMenu {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+@media (max-width: 600px) {
+    .logo {
+        font-size: 35px;
+    }
+}
+@media (max-width: 425px) {
+    nav div.bar {
+        right: 50px;
+    }
+
+    nav ul {
+        padding: 30px 10px 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+.header-title {
+    font-family: Broadway, sans-serif; 
+    font-size: 90px; 
+    font-weight: bold;
+    color: #1e1c1c;
+    margin-left: 20px;
+}
+.nav-link.login {
+    font-weight: bold;
+    font-family: Arial Black, sans-serif; 
+    color: #ffffff; 
+    
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    position: fixed; 
+    top: -10px; 
+    right: 20px; 
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    width: 200px; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    background-color: #010000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}
+
+.news {
+    border-bottom: 1px solid #555;
+    display: flex;
+}
+
+.news:last-child {
+    padding: 30px 0;
+    border-bottom: none;
+}
+
+.news > .title h2 {
+    font-size: 40px;
+    cursor: pointer;
+    display: inline;
+}
+
+.news > .title h2:hover {
+    text-decoration: underline;
+}
+
+.news .newsBox {
+    width: 100%;
+    height: 200px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news .newsBox .newsCard {
+    width: 280px;
+    margin: 10px;
+}
+
+.news .newsBox .newsCard .img {
+    width: 100%;
+    height: 150px;
+    background-color:black;
+    border-radius: 5px;
+}
+
+.news .newsBox .newsCard .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.news .newsBox .newsCard .text {
+    padding: 10px;
+}
+
+.news .newsBox .newsCard .text .title a {
+    text-decoration: none;
+}
+
+.news .newsBox .newsCard .text .title a p {
+    font-size: 15px;
+    color: #fff;
+    display: inline;
+    cursor: pointer;
+}
+
+.news .newsBox .newsCard .title a p:hover {
+    text-decoration: underline;
+}
+.header-title {
+    font-size: 77px;
+}

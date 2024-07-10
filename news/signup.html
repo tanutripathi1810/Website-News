@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Signup</title>
+    <style>
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+        }
+
+        .search-bar button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #45a049;
+        }
+
+        .flex-con {
+            display: flex;
+            padding: 30px;
+        }
+
+        .log {
+            display: flex;
+            right: 0;
+            margin-top: 120px;
+            width: 500px;
+            box-shadow: 10px 10px #45a049;
+        }
+
+        .box {
+            width: 400px;
+            margin-top: 200px;
+            margin-left: 300px;
+            margin-right: 100px;
+            color: white;
+            background-color: black;
+            padding: 20px;
+            border-width: 4px;
+            border-color: #ccc;
+            border-radius: 10px;
+        }
+
+        .loginh {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .entry label {
+            color: white;
+        }
+
+        .entry input[type="email"],
+        .entry input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            width: 120px;
+            height: 40px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Daily Digest" width="75" height="75">
+        </div>
+        <h1 class="header-title">DAILY DIGEST</h1>
+        <nav>
+            <ul>
+                <li><a href="news.html">Home</a></li>
+                <li><a href="#sportsNews">Sports</a></li>
+                <li><a href="#businessNews">Business</a></li>
+                <li><a href="#techNews">Technology</a></li>
+                <li><a href="login.html" class="nav-link login">Login</a></li>
+            </ul>
+            <div class="bar">
+                <i class="open fa-solid fa-bars-staggered"></i>
+                <i class="close fa-solid fa-xmark"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Signup Box -->
+    <div class="flex-con">
+        <div class="box">
+            <div class="loginh">Don't have an account? Get one quickly!</div>
+            <div class="entry">
+                <label for="Email">Email</label>
+                <input type="email" name="Email" id="Email" required>
+                <label for="Password">Password</label>
+                <input type="password" id="Password" name="Password" required>
+                <label for="cpass">Confirm Password</label>
+                <input type="password" id="cpass" required><br><br>
+                <button type="submit" id="button" class="button" onclick="validateForm()">Create Account</button>
+            </div>
+        </div>
+        <div class="log">
+            <img src="Screenshot 2024-03-16 023112.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById('Email').value;
+            const password = document.getElementById('Password').value;
+            const confirmPassword = document.getElementById('cpass').value;
+
+            // Email validation
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            // Check if all fields are filled
+            if (!email || !password || !confirmPassword) {
+                alert('Please fill in all fields.');
+                return false;
+            }
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return false;
+            }
+
+            alert('Account created successfully!');
+            // Optionally, you can submit the form here or redirect the user.
+            // e.g., document.forms[0].submit();
+            return true;
+        }
+    </script>
+</body>
+</html>
